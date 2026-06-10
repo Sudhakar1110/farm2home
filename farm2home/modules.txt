@@ -1,11 +1,1 @@
-Farm Management
-Product Catalog
-Subscription Management
-Customer Management
-Order Management
-Delivery and Logistics
-Payments
-Quality and Compliance
-Marketplace
-Reports
-Configuration
+Farm to Home

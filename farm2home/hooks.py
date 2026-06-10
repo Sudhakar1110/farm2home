@@ -92,21 +92,21 @@ app_include_css = "/assets/farm2home/css/farm2home.css"
 
 doc_events = {
     "Subscription": {
-        "on_submit": "farm2home.farm2home.doctype.subscription.subscription.on_submit",
-        "on_cancel": "farm2home.farm2home.doctype.subscription.subscription.on_cancel",
+        "on_submit": "farm2home.farm_to_home.doctype.subscription.subscription.on_submit",
+        "on_cancel": "farm2home.farm_to_home.doctype.subscription.subscription.on_cancel",
     },
     "Order": {
-        "on_submit": "farm2home.farm2home.doctype.order.order.on_submit",
-        "on_cancel": "farm2home.farm2home.doctype.order.order.on_cancel",
+        "on_submit": "farm2home.farm_to_home.doctype.order.order.on_submit",
+        "on_cancel": "farm2home.farm_to_home.doctype.order.order.on_cancel",
     },
     "Payment Transaction": {
-        "on_submit": "farm2home.farm2home.doctype.payment_transaction.payment_transaction.on_submit",
+        "on_submit": "farm2home.farm_to_home.doctype.payment_transaction.payment_transaction.on_submit",
     },
     "Delivery Schedule": {
-        "on_update": "farm2home.farm2home.doctype.delivery_schedule.delivery_schedule.on_update",
+        "on_update": "farm2home.farm_to_home.doctype.delivery_schedule.delivery_schedule.on_update",
     },
     "Quality Inspection": {
-        "on_submit": "farm2home.farm2home.doctype.quality_inspection.quality_inspection.on_submit",
+        "on_submit": "farm2home.farm_to_home.doctype.quality_inspection.quality_inspection.on_submit",
     },
 }
 
@@ -115,22 +115,22 @@ doc_events = {
 
 scheduler_events = {
     "daily": [
-        "farm2home.farm2home.doctype.subscription.subscription.process_daily_subscriptions",
-        "farm2home.farm2home.doctype.delivery_schedule.delivery_schedule.generate_daily_delivery_schedules",
-        "farm2home.farm2home.doctype.subscription_billing.subscription_billing.generate_monthly_bills",
+        "farm2home.farm_to_home.doctype.subscription.subscription.process_daily_subscriptions",
+        "farm2home.farm_to_home.doctype.delivery_schedule.delivery_schedule.generate_daily_delivery_schedules",
+        "farm2home.farm_to_home.doctype.subscription_billing.subscription_billing.generate_monthly_bills",
     ],
     "hourly": [
-        "farm2home.farm2home.doctype.order.order.update_order_status",
+        "farm2home.farm_to_home.doctype.order.order.update_order_status",
     ],
     "weekly": [
-        "farm2home.farm2home.doctype.farm.farm.update_farm_performance_metrics",
+        "farm2home.farm_to_home.doctype.farm.farm.update_farm_performance_metrics",
     ],
     "cron": {
         "0 6 * * *": [
-            "farm2home.farm2home.doctype.subscription.subscription.send_daily_reminders",
+            "farm2home.farm_to_home.doctype.subscription.subscription.send_daily_reminders",
         ],
         "0 20 * * *": [
-            "farm2home.farm2home.doctype.delivery_schedule.delivery_schedule.optimize_routes",
+            "farm2home.farm_to_home.doctype.delivery_schedule.delivery_schedule.optimize_routes",
         ],
     },
 }
