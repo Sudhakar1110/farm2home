@@ -53,6 +53,8 @@ app_include_css = "/assets/farm2home/css/farm2home.css"
 # ------------
 
 # before_install = "farm2home.install.before_install"
+after_migrate = ["frappe.desk.desktop.sync_workspaces"]
+
 # after_install = "farm2home.install.after_install"
 
 # Uninstallation
