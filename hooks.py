@@ -53,7 +53,11 @@ app_include_css = "/assets/farm2home/css/farm2home.css"
 # ------------
 
 # before_install = "farm2home.install.before_install"
-after_migrate = ["frappe.desk.desktop.sync_workspaces"]
+
+# Workspace sync is handled automatically by frappe.model.sync.sync_all()
+# during bench migrate/install-app. Workspace JSON files must be at:
+# [app]/[module]/workspace/[name]/[name].json (directory = workspace, singular)
+# after_migrate = []
 
 # after_install = "farm2home.install.after_install"
 
