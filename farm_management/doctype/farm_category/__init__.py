@@ -1,1 +1,0 @@
-# Farm Category DocType
