@@ -203,14 +203,84 @@ scheduler_events = {
 # Fixtures
 # --------
 
+# IMPORTANT: Workflow States must be exported as fixtures BEFORE workflows that
+# reference them. The fixtures below ensure all Workflow States referenced by
+# Subscription, Order, Delivery Schedule, and Quality Inspection workflows exist.
+
 fixtures = [
     "fixtures.role",
     "fixtures.workflow",
     "fixtures.module_def",
     {
+        "dt": "Custom Field",
+        "filters": [
+            ["name", "like", "%farm2home%"]
+        ]
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [
+            ["name", "like", "%farm2home%"]
+        ]
+    },
+    {
         "dt": "Role",
         "filters": [
-            ["name", "in", ["Farm Manager", "Delivery Agent", "Subscription Manager", "Quality Inspector", "Farm Admin"]]
+            ["name", "in", ["Farm Manager", "Delivery Agent", "Customer", "Subscription Manager", "Quality Inspector", "Farm Admin"]]
+        ]
+    },
+    {
+        "dt": "Workflow",
+        "filters": [
+            ["document_type", "in", ["Subscription", "Order", "Delivery Schedule", "Quality Inspection"]]
+        ]
+    },
+    {
+        "dt": "Workflow State",
+        "filters": [
+            ["name", "in", ["Draft", "Active", "Paused", "Cancelled", "Pending", "Confirmed", "Out for Delivery", "Delivered", "Returned", "Inspected", "Approved", "Rejected"]]
+        ]
+    },
+    {
+        "dt": "Workflow Action Master",
+        "filters": [
+            ["name", "in", ["Approve", "Reject", "Cancel", "Resume", "Pause", "Confirm", "Deliver", "Return"]]
+        ]
+    },
+    {
+        "dt": "Notification",
+        "filters": [
+            ["document_type", "in", ["Subscription", "Order", "Delivery Schedule", "Payment Transaction", "Quality Inspection"]]
+        ]
+    },
+    {
+        "dt": "Email Template",
+        "filters": [
+            ["name", "like", "%Farm2Home%"]
+        ]
+    },
+    {
+        "dt": "Print Format",
+        "filters": [
+            ["doc_type", "in", ["Order", "Subscription", "Delivery Schedule", "Payment Transaction"]]
+        ]
+    },
+    {
+        "dt": "Web Form",
+        "filters": [
+            ["module", "=", "Farm to Home"]
+        ]
+    },
+    {
+        "dt": "Dashboard Chart",
+        "filters": [
+            ["chart_name", "like", "%Farm2Home%"]
+        ]
+    },
+    {
+        "dt": "Number Card",
+        "filters": [
+            ["name", "like", "%Farm2Home%"]
         ]
     },
 ]
