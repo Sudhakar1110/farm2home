@@ -1,0 +1,142 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:RT-{route_name}-{###}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "route_name",
+        "delivery_zone",
+        "delivery_agent",
+        "column_break_1",
+        "status",
+        "route_date",
+        "vehicle_number",
+        "stops_section",
+        "total_stops",
+        "estimated_distance_km",
+        "column_break_2",
+        "estimated_duration_min",
+        "actual_distance_km",
+        "deliveries_section",
+        "route_deliveries"
+    ],
+    "fields": [
+        {
+            "fieldname": "route_name",
+            "fieldtype": "Data",
+            "label": "Route Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "delivery_zone",
+            "fieldtype": "Link",
+            "label": "Delivery Zone",
+            "options": "Delivery Zone"
+        },
+        {
+            "fieldname": "delivery_agent",
+            "fieldtype": "Link",
+            "label": "Delivery Agent",
+            "options": "Delivery Agent"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Planned\nIn Progress\nCompleted\nCancelled",
+            "default": "Planned"
+        },
+        {
+            "fieldname": "route_date",
+            "fieldtype": "Date",
+            "label": "Route Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "vehicle_number",
+            "fieldtype": "Data",
+            "label": "Vehicle Number"
+        },
+        {
+            "fieldname": "stops_section",
+            "fieldtype": "Section Break",
+            "label": "Route Details"
+        },
+        {
+            "fieldname": "total_stops",
+            "fieldtype": "Int",
+            "label": "Total Stops",
+            "read_only": 1
+        },
+        {
+            "fieldname": "estimated_distance_km",
+            "fieldtype": "Float",
+            "label": "Estimated Distance (km)"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "estimated_duration_min",
+            "fieldtype": "Int",
+            "label": "Estimated Duration (min)"
+        },
+        {
+            "fieldname": "actual_distance_km",
+            "fieldtype": "Float",
+            "label": "Actual Distance (km)"
+        },
+        {
+            "fieldname": "deliveries_section",
+            "fieldtype": "Section Break",
+            "label": "Deliveries"
+        },
+        {
+            "fieldname": "route_deliveries",
+            "fieldtype": "Table",
+            "label": "Route Deliveries",
+            "options": "Route Delivery"
+        }
+    ],
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Delivery and Logistics",
+    "name": "Delivery Route",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Farm Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

@@ -1,0 +1,5 @@
+include farm2home/public/css/*.css
+include farm2home/public/js/*.js
+recursive-include farm2home/templates *.html
+recursive-include farm2home/www *.html
+recursive-include farm2home/fixtures *.json

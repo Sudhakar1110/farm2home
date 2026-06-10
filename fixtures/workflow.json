@@ -1,0 +1,147 @@
+[
+    {
+        "doctype": "Workflow",
+        "document_type": "Subscription",
+        "is_active": 1,
+        "override_status": 0,
+        "send_email_alert": 0,
+        "workflow_name": "Subscription Workflow",
+        "workflow_state_field": "status",
+        "states": [
+            {
+                "state": "Draft",
+                "doc_status": "0",
+                "update_field": "status",
+                "update_value": "Draft",
+                "allow_edit": "System Manager"
+            },
+            {
+                "state": "Active",
+                "doc_status": "1",
+                "update_field": "status",
+                "update_value": "Active",
+                "allow_edit": "System Manager"
+            },
+            {
+                "state": "Paused",
+                "doc_status": "1",
+                "update_field": "status",
+                "update_value": "Paused",
+                "allow_edit": "System Manager"
+            },
+            {
+                "state": "Cancelled",
+                "doc_status": "2",
+                "update_field": "status",
+                "update_value": "Cancelled",
+                "allow_edit": "System Manager"
+            }
+        ],
+        "transitions": [
+            {
+                "state": "Draft",
+                "action": "Approve",
+                "next_state": "Active",
+                "allowed": "System Manager",
+                "allow_self_approval": 1
+            },
+            {
+                "state": "Active",
+                "action": "Pause",
+                "next_state": "Paused",
+                "allowed": "System Manager",
+                "allow_self_approval": 1
+            },
+            {
+                "state": "Paused",
+                "action": "Resume",
+                "next_state": "Active",
+                "allowed": "System Manager",
+                "allow_self_approval": 1
+            },
+            {
+                "state": "Active",
+                "action": "Cancel",
+                "next_state": "Cancelled",
+                "allowed": "System Manager",
+                "allow_self_approval": 1
+            }
+        ]
+    },
+    {
+        "doctype": "Workflow",
+        "document_type": "Order",
+        "is_active": 1,
+        "override_status": 0,
+        "send_email_alert": 0,
+        "workflow_name": "Order Workflow",
+        "workflow_state_field": "status",
+        "states": [
+            {
+                "state": "Draft",
+                "doc_status": "0",
+                "update_field": "status",
+                "update_value": "Draft",
+                "allow_edit": "System Manager"
+            },
+            {
+                "state": "Confirmed",
+                "doc_status": "1",
+                "update_field": "status",
+                "update_value": "Confirmed",
+                "allow_edit": "System Manager"
+            },
+            {
+                "state": "Out for Delivery",
+                "doc_status": "1",
+                "update_field": "status",
+                "update_value": "Out for Delivery",
+                "allow_edit": "System Manager"
+            },
+            {
+                "state": "Delivered",
+                "doc_status": "1",
+                "update_field": "status",
+                "update_value": "Delivered",
+                "allow_edit": "System Manager"
+            },
+            {
+                "state": "Cancelled",
+                "doc_status": "2",
+                "update_field": "status",
+                "update_value": "Cancelled",
+                "allow_edit": "System Manager"
+            }
+        ],
+        "transitions": [
+            {
+                "state": "Draft",
+                "action": "Confirm",
+                "next_state": "Confirmed",
+                "allowed": "System Manager",
+                "allow_self_approval": 1
+            },
+            {
+                "state": "Confirmed",
+                "action": "Deliver",
+                "next_state": "Out for Delivery",
+                "allowed": "System Manager",
+                "allow_self_approval": 1
+            },
+            {
+                "state": "Out for Delivery",
+                "action": "Deliver",
+                "next_state": "Delivered",
+                "allowed": "System Manager",
+                "allow_self_approval": 1
+            },
+            {
+                "state": "Confirmed",
+                "action": "Cancel",
+                "next_state": "Cancelled",
+                "allowed": "System Manager",
+                "allow_self_approval": 1
+            }
+        ]
+    }
+]

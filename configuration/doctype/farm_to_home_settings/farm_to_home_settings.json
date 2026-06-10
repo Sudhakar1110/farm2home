@@ -1,0 +1,168 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "field:settings_name",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "settings_name",
+        "general_section",
+        "platform_name",
+        "default_currency",
+        "column_break_1",
+        "enable_subscriptions",
+        "enable_wallet",
+        "commission_section",
+        "default_commission_percentage",
+        "minimum_commission_amount",
+        "delivery_section",
+        "default_delivery_charge",
+        "free_delivery_threshold",
+        "column_break_2",
+        "enable_otp_verification",
+        "enable_route_optimization",
+        "notification_section",
+        "order_confirmation_template",
+        "delivery_notification_template",
+        "payment_confirmation_template"
+    ],
+    "fields": [
+        {
+            "fieldname": "settings_name",
+            "fieldtype": "Data",
+            "label": "Settings Name",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "general_section",
+            "fieldtype": "Section Break",
+            "label": "General"
+        },
+        {
+            "fieldname": "platform_name",
+            "fieldtype": "Data",
+            "label": "Platform Name",
+            "default": "Farm2Home"
+        },
+        {
+            "fieldname": "default_currency",
+            "fieldtype": "Link",
+            "label": "Default Currency",
+            "options": "Currency",
+            "default": "INR"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "enable_subscriptions",
+            "fieldtype": "Check",
+            "label": "Enable Subscriptions",
+            "default": 1
+        },
+        {
+            "fieldname": "enable_wallet",
+            "fieldtype": "Check",
+            "label": "Enable Wallet",
+            "default": 1
+        },
+        {
+            "fieldname": "commission_section",
+            "fieldtype": "Section Break",
+            "label": "Commission"
+        },
+        {
+            "fieldname": "default_commission_percentage",
+            "fieldtype": "Percent",
+            "label": "Default Commission %",
+            "default": 10
+        },
+        {
+            "fieldname": "minimum_commission_amount",
+            "fieldtype": "Currency",
+            "label": "Minimum Commission Amount",
+            "default": 5
+        },
+        {
+            "fieldname": "delivery_section",
+            "fieldtype": "Section Break",
+            "label": "Delivery"
+        },
+        {
+            "fieldname": "default_delivery_charge",
+            "fieldtype": "Currency",
+            "label": "Default Delivery Charge",
+            "default": 30
+        },
+        {
+            "fieldname": "free_delivery_threshold",
+            "fieldtype": "Currency",
+            "label": "Free Delivery Threshold",
+            "default": 500
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "enable_otp_verification",
+            "fieldtype": "Check",
+            "label": "Enable OTP Verification",
+            "default": 1
+        },
+        {
+            "fieldname": "enable_route_optimization",
+            "fieldtype": "Check",
+            "label": "Enable Route Optimization",
+            "default": 1
+        },
+        {
+            "fieldname": "notification_section",
+            "fieldtype": "Section Break",
+            "label": "Notification Templates"
+        },
+        {
+            "fieldname": "order_confirmation_template",
+            "fieldtype": "Link",
+            "label": "Order Confirmation Template",
+            "options": "Email Template"
+        },
+        {
+            "fieldname": "delivery_notification_template",
+            "fieldtype": "Link",
+            "label": "Delivery Notification Template",
+            "options": "Email Template"
+        },
+        {
+            "fieldname": "payment_confirmation_template",
+            "fieldtype": "Link",
+            "label": "Payment Confirmation Template",
+            "options": "Email Template"
+        }
+    ],
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Configuration",
+    "name": "Farm to Home Settings",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

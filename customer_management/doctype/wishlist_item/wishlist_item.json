@@ -1,0 +1,52 @@
+{
+    "actions": [],
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "product",
+        "product_name",
+        "added_date",
+        "notes"
+    ],
+    "fields": [
+        {
+            "fieldname": "product",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Product",
+            "options": "Product",
+            "reqd": 1
+        },
+        {
+            "fieldname": "product_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Product Name",
+            "fetch_from": "product.product_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "added_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Added Date",
+            "default": "Today"
+        },
+        {
+            "fieldname": "notes",
+            "fieldtype": "Data",
+            "label": "Notes"
+        }
+    ],
+    "istable": 1,
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Customer Management",
+    "name": "Wishlist Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

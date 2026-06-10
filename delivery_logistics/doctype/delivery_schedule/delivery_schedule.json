@@ -1,0 +1,278 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:DEL-{customer}-{####}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "delivery_details",
+        "customer",
+        "customer_name",
+        "order",
+        "subscription",
+        "column_break_1",
+        "status",
+        "delivery_date",
+        "delivery_time_slot",
+        "route_section",
+        "delivery_zone",
+        "delivery_route",
+        "column_break_2",
+        "delivery_agent",
+        "agent_name",
+        "vehicle_number",
+        "address_section",
+        "delivery_address",
+        "address_display",
+        "items_section",
+        "delivery_items",
+        "tracking_section",
+        "tracking_number",
+        "otp_verification",
+        "delivery_otp",
+        "column_break_3",
+        "actual_delivery_time",
+        "delivery_confirmation",
+        "customer_signature",
+        "delivery_photo",
+        "notes_section",
+        "delivery_notes",
+        "customer_feedback"
+    ],
+    "fields": [
+        {
+            "fieldname": "delivery_details",
+            "fieldtype": "Section Break",
+            "label": "Delivery Details"
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "Customer Name",
+            "fetch_from": "customer.customer_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "order",
+            "fieldtype": "Link",
+            "label": "Order",
+            "options": "Order"
+        },
+        {
+            "fieldname": "subscription",
+            "fieldtype": "Link",
+            "label": "Subscription",
+            "options": "Subscription"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Scheduled\nConfirmed\nOut for Delivery\nDelivered\nCancelled\nFailed\nReturned",
+            "default": "Scheduled"
+        },
+        {
+            "fieldname": "delivery_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Delivery Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "delivery_time_slot",
+            "fieldtype": "Select",
+            "label": "Delivery Time Slot",
+            "options": "6 AM - 8 AM\n8 AM - 10 AM\n10 AM - 12 PM\n4 PM - 6 PM\n6 PM - 8 PM"
+        },
+        {
+            "fieldname": "route_section",
+            "fieldtype": "Section Break",
+            "label": "Route & Agent"
+        },
+        {
+            "fieldname": "delivery_zone",
+            "fieldtype": "Link",
+            "label": "Delivery Zone",
+            "options": "Delivery Zone"
+        },
+        {
+            "fieldname": "delivery_route",
+            "fieldtype": "Link",
+            "label": "Delivery Route",
+            "options": "Delivery Route"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "delivery_agent",
+            "fieldtype": "Link",
+            "label": "Delivery Agent",
+            "options": "Delivery Agent"
+        },
+        {
+            "fieldname": "agent_name",
+            "fieldtype": "Data",
+            "label": "Agent Name",
+            "fetch_from": "delivery_agent.agent_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "vehicle_number",
+            "fieldtype": "Data",
+            "label": "Vehicle Number"
+        },
+        {
+            "fieldname": "address_section",
+            "fieldtype": "Section Break",
+            "label": "Address"
+        },
+        {
+            "fieldname": "delivery_address",
+            "fieldtype": "Link",
+            "label": "Delivery Address",
+            "options": "Address"
+        },
+        {
+            "fieldname": "address_display",
+            "fieldtype": "Small Text",
+            "label": "Address Display",
+            "read_only": 1
+        },
+        {
+            "fieldname": "items_section",
+            "fieldtype": "Section Break",
+            "label": "Items"
+        },
+        {
+            "fieldname": "delivery_items",
+            "fieldtype": "Table",
+            "label": "Delivery Items",
+            "options": "Delivery Item"
+        },
+        {
+            "fieldname": "tracking_section",
+            "fieldtype": "Section Break",
+            "label": "Tracking"
+        },
+        {
+            "fieldname": "tracking_number",
+            "fieldtype": "Data",
+            "label": "Tracking Number"
+        },
+        {
+            "fieldname": "otp_verification",
+            "fieldtype": "Check",
+            "label": "OTP Verification Required",
+            "default": 1
+        },
+        {
+            "fieldname": "delivery_otp",
+            "fieldtype": "Data",
+            "label": "Delivery OTP",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "actual_delivery_time",
+            "fieldtype": "Datetime",
+            "label": "Actual Delivery Time"
+        },
+        {
+            "fieldname": "delivery_confirmation",
+            "fieldtype": "Select",
+            "label": "Delivery Confirmation",
+            "options": "Pending\nConfirmed\nRejected"
+        },
+        {
+            "fieldname": "customer_signature",
+            "fieldtype": "Attach Image",
+            "label": "Customer Signature"
+        },
+        {
+            "fieldname": "delivery_photo",
+            "fieldtype": "Attach Image",
+            "label": "Delivery Photo"
+        },
+        {
+            "fieldname": "notes_section",
+            "fieldtype": "Section Break",
+            "label": "Notes"
+        },
+        {
+            "fieldname": "delivery_notes",
+            "fieldtype": "Small Text",
+            "label": "Delivery Notes"
+        },
+        {
+            "fieldname": "customer_feedback",
+            "fieldtype": "Rating",
+            "label": "Customer Feedback"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Delivery and Logistics",
+    "name": "Delivery Schedule",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Farm Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Delivery Agent",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

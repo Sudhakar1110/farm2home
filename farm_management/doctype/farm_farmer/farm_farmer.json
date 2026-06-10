@@ -1,0 +1,44 @@
+{
+    "actions": [],
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "farmer",
+        "role",
+        "is_primary"
+    ],
+    "fields": [
+        {
+            "fieldname": "farmer",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Farmer",
+            "options": "Farmer",
+            "reqd": 1
+        },
+        {
+            "fieldname": "role",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Role",
+            "options": "Owner\nManager\nWorker\nPartner"
+        },
+        {
+            "fieldname": "is_primary",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Is Primary Contact"
+        }
+    ],
+    "istable": 1,
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm Management",
+    "name": "Farm Farmer",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

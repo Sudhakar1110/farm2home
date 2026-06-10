@@ -1,0 +1,56 @@
+/* Farm2Home Custom Styles */
+
+.farm2home-brand {
+    color: #4caf50 !important;
+}
+
+.farm-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.farm-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-badge-organic {
+    background-color: #4caf50;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+}
+
+.subscription-plan-card {
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.delivery-status-scheduled { color: #2196f3; }
+.delivery-status-out-for-delivery { color: #ff9800; }
+.delivery-status-delivered { color: #4caf50; }
+.delivery-status-cancelled { color: #f44336; }
+
+.dashboard-stat-card {
+    background: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.dashboard-stat-card.blue {
+    background: linear-gradient(135deg, #2196f3 0%, #64b5f6 100%);
+}
+
+.dashboard-stat-card.orange {
+    background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+}
+
+.dashboard-stat-card.red {
+    background: linear-gradient(135deg, #f44336 0%, #e57373 100%);
+}
