@@ -1,6 +1,7 @@
 [
   {
     "doctype": "Workflow",
+    "name": "Subscription Workflow",
     "document_type": "Subscription",
     "is_active": 1,
     "override_status": 0,
@@ -70,6 +71,7 @@
   },
   {
     "doctype": "Workflow",
+    "name": "Order Workflow",
     "document_type": "Order",
     "is_active": 1,
     "override_status": 0,

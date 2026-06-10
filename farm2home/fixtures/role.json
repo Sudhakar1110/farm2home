@@ -1,26 +1,31 @@
 [
   {
     "doctype": "Role",
+    "name": "Farm Manager",
     "role_name": "Farm Manager",
     "desk_access": 1
   },
   {
     "doctype": "Role",
+    "name": "Delivery Agent",
     "role_name": "Delivery Agent",
     "desk_access": 1
   },
   {
     "doctype": "Role",
+    "name": "Subscription Manager",
     "role_name": "Subscription Manager",
     "desk_access": 1
   },
   {
     "doctype": "Role",
+    "name": "Quality Inspector",
     "role_name": "Quality Inspector",
     "desk_access": 1
   },
   {
     "doctype": "Role",
+    "name": "Farm Admin",
     "role_name": "Farm Admin",
     "desk_access": 1
   }
