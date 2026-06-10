@@ -1443,5 +1443,82 @@ def create_demo_data():
         log(f"  {doctype}: {count}", "📊")
 
 
+def cleanup_demo_data():
+    """Delete all demo data created by this script.
+    Run via:
+        bench --site sudhakar1.site execute farm2home.farm_to_home.demo_data.cleanup_demo_data
+    """
+    log("=" * 60, "🧹")
+    log("Cleaning up all Farm2Home demo data...", "🧹")
+    log("=" * 60, "🧹")
+    
+    # Order matters: child-table-dependent first, then parents
+    delete_order = [
+        # Child-table-dependent first
+        "Delivery Schedule",
+        "Customer Review",
+        "Customer Wallet",
+        "Wishlist",
+        "Farm Product",
+        "Product Inventory",
+        "Quality Inspection",
+        "Payment Transaction",
+        "Subscription Billing",
+        # Core transactional
+        "Order",
+        "Subscription",
+        "Delivery Route",
+        # Customers & Addresses
+        "Address",
+        "Customer",
+        # Product/Subscription data
+        "Product",
+        "Subscription Plan",
+        "Farm Category",
+        "Product Category",
+        "Organic Certification",
+        # Agents & Zones
+        "Delivery Agent",
+        "Delivery Zone",
+        # Farm data last (farmers reference farms)
+        "Farmer",
+        "Farm",
+    ]
+    
+    total = 0
+    for dt in delete_order:
+        try:
+            count = frappe.db.count(dt)
+            if count > 0:
+                frappe.db.delete(dt, {})
+                total += count
+                log(f"  ✅ Deleted {count} {dt}(s)", "🧹")
+        except Exception as e:
+            try:
+                table_name = f"tab{dt}"
+                frappe.db.sql(f"DELETE FROM `{table_name}`")
+                log(f"  ✅ SQL-deleted {dt}", "🧹")
+            except Exception as e2:
+                log(f"  ⚠️ Could not delete {dt}: {e2}", "⚠️")
+    
+    # Also reset autoname series counters
+    try:
+        frappe.db.delete("Series", {"name": ["like", "FARM-%"]})
+        frappe.db.delete("Series", {"name": ["like", "PROD-%"]})
+        frappe.db.delete("Series", {"name": ["like", "REV-%"]})
+        frappe.db.delete("Series", {"name": ["like", "SUB-%"]})
+        frappe.db.delete("Series", {"name": ["like", "ORD-%"]})
+        log(f"  ✅ Reset autoname series counters", "🧹")
+    except Exception:
+        pass
+    
+    frappe.db.commit()
+    frappe.clear_cache()
+    
+    log("=" * 60, "🧹")
+    log(f"Cleanup complete! Deleted {total} records.", "🧹")
+    log("=" * 60, "🧹")
+
+
 if __name__ == "__main__":
     create_demo_data()
