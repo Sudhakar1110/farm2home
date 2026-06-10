@@ -85,28 +85,29 @@ def execute():
     except Exception as e:
         print(f"⚠️ Server Script cleanup failed: {e}")
 
-    # ── Clean up ANY other leftover event_* fields on ANY doctype ──
+    # ── Clean up ANY other leftover event_* fields that reference non-existing doctypes ──
+    # Only delete fields whose 'options' points to a doctype that doesn't exist
     try:
         all_event_fields = frappe.get_all("Custom Field",
-            filters={"fieldname": ("like", "event_%")},
-            fields=["name", "dt", "fieldname"]
+            filters={"fieldname": ("like", "event_%"), "fieldtype": "Link"},
+            fields=["name", "dt", "fieldname", "options"]
         )
         for cf in all_event_fields:
-            try:
-                frappe.delete_doc("Custom Field", cf["name"], ignore_permissions=True, force=True)
-                print(f"✅ Removed leftover Custom Field '{cf['name']}' from {cf['dt']}")
-            except Exception:
-                frappe.db.delete("Custom Field", {"name": cf["name"]})
-                print(f"✅ DB-deleted leftover Custom Field '{cf['name']}' from {cf['dt']}")
-        if all_event_fields:
-            frappe.db.commit()
+            if cf.get("options") and not frappe.db.exists("DocType", cf["options"]):
+                try:
+                    frappe.delete_doc("Custom Field", cf["name"], ignore_permissions=True, force=True)
+                    print(f"✅ Removed leftover Custom Field '{cf['name']}' ({cf['dt']}.{cf['fieldname']} -> {cf['options']})")
+                except Exception:
+                    frappe.db.delete("Custom Field", {"name": cf["name"]})
+                    print(f"✅ DB-deleted leftover Custom Field '{cf['name']}' ({cf['dt']}.{cf['fieldname']} -> {cf['options']})")
+                frappe.db.commit()
     except Exception as e:
         print(f"⚠️ Broader event_* cleanup failed: {e}")
 
     # ── Clear cache so Frappe re-evaluates field validity ──
     try:
-        frappe.clear_cache(doctype=doctype)
-        print(f"✅ Cleared cache for {doctype} doctype")
+        frappe.clear_cache()
+        print("✅ Cleared cache")
     except Exception as e:
         print(f"⚠️ Cache clear failed: {e}")
 
