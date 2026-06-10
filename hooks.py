@@ -201,7 +201,6 @@ fixtures = [
     "fixtures.role",
     "fixtures.workflow",
     "fixtures.module_def",
-    "fixtures.workspace",
     {
         "dt": "Role",
         "filters": [
