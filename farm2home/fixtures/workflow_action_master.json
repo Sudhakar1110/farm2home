@@ -1,0 +1,42 @@
+[
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Approve",
+    "__newname": "Approve"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Reject",
+    "__newname": "Reject"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Cancel",
+    "__newname": "Cancel"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Resume",
+    "__newname": "Resume"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Pause",
+    "__newname": "Pause"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Confirm",
+    "__newname": "Confirm"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Deliver",
+    "__newname": "Deliver"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Return",
+    "__newname": "Return"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "doctype": "Workflow State",
+    "name": "Draft",
+    "__newname": "Draft"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Active",
+    "__newname": "Active"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Paused",
+    "__newname": "Paused"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Cancelled",
+    "__newname": "Cancelled"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Confirmed",
+    "__newname": "Confirmed"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Out for Delivery",
+    "__newname": "Out for Delivery"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Delivered",
+    "__newname": "Delivered"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Pending",
+    "__newname": "Pending"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Returned",
+    "__newname": "Returned"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Inspected",
+    "__newname": "Inspected"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Approved",
+    "__newname": "Approved"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Rejected",
+    "__newname": "Rejected"
+  }
+]
