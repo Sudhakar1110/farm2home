@@ -2,41 +2,41 @@
   {
     "doctype": "Workflow Action Master",
     "name": "Approve",
-    "__newname": "Approve"
+    "workflow_action_name": "Approve"
   },
   {
     "doctype": "Workflow Action Master",
     "name": "Reject",
-    "__newname": "Reject"
+    "workflow_action_name": "Reject"
   },
   {
     "doctype": "Workflow Action Master",
     "name": "Cancel",
-    "__newname": "Cancel"
+    "workflow_action_name": "Cancel"
   },
   {
     "doctype": "Workflow Action Master",
     "name": "Resume",
-    "__newname": "Resume"
+    "workflow_action_name": "Resume"
   },
   {
     "doctype": "Workflow Action Master",
     "name": "Pause",
-    "__newname": "Pause"
+    "workflow_action_name": "Pause"
   },
   {
     "doctype": "Workflow Action Master",
     "name": "Confirm",
-    "__newname": "Confirm"
+    "workflow_action_name": "Confirm"
   },
   {
     "doctype": "Workflow Action Master",
     "name": "Deliver",
-    "__newname": "Deliver"
+    "workflow_action_name": "Deliver"
   },
   {
     "doctype": "Workflow Action Master",
     "name": "Return",
-    "__newname": "Return"
+    "workflow_action_name": "Return"
   }
 ]
