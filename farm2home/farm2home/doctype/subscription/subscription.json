@@ -1,0 +1,348 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:SUB-{customer}-{####}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "subscription_details",
+        "customer",
+        "customer_name",
+        "subscription_plan",
+        "plan_name",
+        "column_break_1",
+        "status",
+        "subscription_type",
+        "start_date",
+        "end_date",
+        "farm_section",
+        "farm",
+        "farm_name",
+        "delivery_section",
+        "delivery_address",
+        "delivery_zone",
+        "delivery_time_slot",
+        "column_break_2",
+        "delivery_day",
+        "preferred_delivery_time",
+        "products_section",
+        "subscription_products",
+        "billing_section",
+        "billing_frequency",
+        "subscription_amount",
+        "discount_applied",
+        "column_break_3",
+        "total_amount",
+        "paid_amount",
+        "balance_amount",
+        "payment_mode",
+        "pause_section",
+        "is_paused",
+        "pause_start_date",
+        "pause_end_date",
+        "pause_reason",
+        "history_section",
+        "next_delivery_date",
+        "last_delivery_date",
+        "total_deliveries",
+        "total_payments"
+    ],
+    "fields": [
+        {
+            "fieldname": "subscription_details",
+            "fieldtype": "Section Break",
+            "label": "Subscription Details"
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "Customer Name",
+            "fetch_from": "customer.customer_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "subscription_plan",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Subscription Plan",
+            "options": "Subscription Plan",
+            "reqd": 1
+        },
+        {
+            "fieldname": "plan_name",
+            "fieldtype": "Data",
+            "label": "Plan Name",
+            "fetch_from": "subscription_plan.plan_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Draft\nActive\nPaused\nCancelled\nExpired",
+            "default": "Draft"
+        },
+        {
+            "fieldname": "subscription_type",
+            "fieldtype": "Select",
+            "label": "Subscription Type",
+            "options": "Weekly\nMonthly\nCustom"
+        },
+        {
+            "fieldname": "start_date",
+            "fieldtype": "Date",
+            "label": "Start Date",
+            "reqd": 1,
+            "default": "Today"
+        },
+        {
+            "fieldname": "end_date",
+            "fieldtype": "Date",
+            "label": "End Date"
+        },
+        {
+            "fieldname": "farm_section",
+            "fieldtype": "Section Break",
+            "label": "Farm"
+        },
+        {
+            "fieldname": "farm",
+            "fieldtype": "Link",
+            "label": "Farm",
+            "options": "Farm"
+        },
+        {
+            "fieldname": "farm_name",
+            "fieldtype": "Data",
+            "label": "Farm Name",
+            "fetch_from": "farm.farm_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "delivery_section",
+            "fieldtype": "Section Break",
+            "label": "Delivery Details"
+        },
+        {
+            "fieldname": "delivery_address",
+            "fieldtype": "Link",
+            "label": "Delivery Address",
+            "options": "Address"
+        },
+        {
+            "fieldname": "delivery_zone",
+            "fieldtype": "Link",
+            "label": "Delivery Zone",
+            "options": "Delivery Zone"
+        },
+        {
+            "fieldname": "delivery_time_slot",
+            "fieldtype": "Select",
+            "label": "Delivery Time Slot",
+            "options": "6 AM - 8 AM\n8 AM - 10 AM\n10 AM - 12 PM\n4 PM - 6 PM\n6 PM - 8 PM"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "delivery_day",
+            "fieldtype": "Select",
+            "label": "Delivery Day",
+            "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday\nDaily\nAlternate Days"
+        },
+        {
+            "fieldname": "preferred_delivery_time",
+            "fieldtype": "Data",
+            "label": "Preferred Delivery Time"
+        },
+        {
+            "fieldname": "products_section",
+            "fieldtype": "Section Break",
+            "label": "Products"
+        },
+        {
+            "fieldname": "subscription_products",
+            "fieldtype": "Table",
+            "label": "Subscription Products",
+            "options": "Subscription Product"
+        },
+        {
+            "fieldname": "billing_section",
+            "fieldtype": "Section Break",
+            "label": "Billing"
+        },
+        {
+            "fieldname": "billing_frequency",
+            "fieldtype": "Select",
+            "label": "Billing Frequency",
+            "options": "Weekly\nMonthly\nQuarterly\nYearly"
+        },
+        {
+            "fieldname": "subscription_amount",
+            "fieldtype": "Currency",
+            "label": "Subscription Amount"
+        },
+        {
+            "fieldname": "discount_applied",
+            "fieldtype": "Currency",
+            "label": "Discount Applied"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "total_amount",
+            "fieldtype": "Currency",
+            "label": "Total Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "paid_amount",
+            "fieldtype": "Currency",
+            "label": "Paid Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "balance_amount",
+            "fieldtype": "Currency",
+            "label": "Balance Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "payment_mode",
+            "fieldtype": "Select",
+            "label": "Payment Mode",
+            "options": "UPI\nCard\nCash on Delivery\nWallet\nQR Code"
+        },
+        {
+            "fieldname": "pause_section",
+            "fieldtype": "Section Break",
+            "label": "Pause Details"
+        },
+        {
+            "fieldname": "is_paused",
+            "fieldtype": "Check",
+            "label": "Is Paused"
+        },
+        {
+            "fieldname": "pause_start_date",
+            "fieldtype": "Date",
+            "label": "Pause Start Date"
+        },
+        {
+            "fieldname": "pause_end_date",
+            "fieldtype": "Date",
+            "label": "Pause End Date"
+        },
+        {
+            "fieldname": "pause_reason",
+            "fieldtype": "Small Text",
+            "label": "Pause Reason"
+        },
+        {
+            "fieldname": "history_section",
+            "fieldtype": "Section Break",
+            "label": "History",
+            "read_only": 1
+        },
+        {
+            "fieldname": "next_delivery_date",
+            "fieldtype": "Date",
+            "label": "Next Delivery Date",
+            "read_only": 1
+        },
+        {
+            "fieldname": "last_delivery_date",
+            "fieldtype": "Date",
+            "label": "Last Delivery Date",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_deliveries",
+            "fieldtype": "Int",
+            "label": "Total Deliveries",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_payments",
+            "fieldtype": "Currency",
+            "label": "Total Payments",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_submittable": 1,
+    "links": [
+        {
+            "group": "Deliveries",
+            "link_doctype": "Delivery Schedule",
+            "link_fieldname": "subscription"
+        },
+        {
+            "group": "Payments",
+            "link_doctype": "Payment Transaction",
+            "link_fieldname": "subscription"
+        }
+    ],
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Subscription",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Subscription Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Customer",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

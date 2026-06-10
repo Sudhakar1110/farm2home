@@ -1,0 +1,99 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "field:zone_name",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "zone_name",
+        "city",
+        "state",
+        "pincode_start",
+        "pincode_end",
+        "delivery_charge",
+        "minimum_order_amount",
+        "is_active"
+    ],
+    "fields": [
+        {
+            "fieldname": "zone_name",
+            "fieldtype": "Data",
+            "label": "Zone Name",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "city",
+            "fieldtype": "Data",
+            "label": "City"
+        },
+        {
+            "fieldname": "state",
+            "fieldtype": "Data",
+            "label": "State"
+        },
+        {
+            "fieldname": "pincode_start",
+            "fieldtype": "Data",
+            "label": "Pincode Start"
+        },
+        {
+            "fieldname": "pincode_end",
+            "fieldtype": "Data",
+            "label": "Pincode End"
+        },
+        {
+            "fieldname": "delivery_charge",
+            "fieldtype": "Currency",
+            "label": "Delivery Charge",
+            "default": 0
+        },
+        {
+            "fieldname": "minimum_order_amount",
+            "fieldtype": "Currency",
+            "label": "Minimum Order Amount",
+            "default": 0
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "label": "Is Active",
+            "default": 1
+        }
+    ],
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Delivery Zone",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Farm Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

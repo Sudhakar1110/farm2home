@@ -1,0 +1,138 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:REV-{customer}-{####}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "review_details",
+        "customer",
+        "customer_name",
+        "farm",
+        "product",
+        "column_break_1",
+        "rating",
+        "review_date",
+        "order",
+        "review_content",
+        "review_title",
+        "review_text",
+        "is_approved",
+        "is_featured"
+    ],
+    "fields": [
+        {
+            "fieldname": "review_details",
+            "fieldtype": "Section Break",
+            "label": "Review Details"
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "Customer Name",
+            "fetch_from": "customer.customer_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "farm",
+            "fieldtype": "Link",
+            "label": "Farm",
+            "options": "Farm"
+        },
+        {
+            "fieldname": "product",
+            "fieldtype": "Link",
+            "label": "Product",
+            "options": "Product"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "rating",
+            "fieldtype": "Rating",
+            "label": "Rating",
+            "reqd": 1
+        },
+        {
+            "fieldname": "review_date",
+            "fieldtype": "Date",
+            "label": "Review Date",
+            "default": "Today"
+        },
+        {
+            "fieldname": "order",
+            "fieldtype": "Link",
+            "label": "Order",
+            "options": "Order"
+        },
+        {
+            "fieldname": "review_content",
+            "fieldtype": "Section Break",
+            "label": "Review Content"
+        },
+        {
+            "fieldname": "review_title",
+            "fieldtype": "Data",
+            "label": "Review Title"
+        },
+        {
+            "fieldname": "review_text",
+            "fieldtype": "Text Editor",
+            "label": "Review Text"
+        },
+        {
+            "fieldname": "is_approved",
+            "fieldtype": "Check",
+            "label": "Is Approved"
+        },
+        {
+            "fieldname": "is_featured",
+            "fieldtype": "Check",
+            "label": "Is Featured"
+        }
+    ],
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Customer Review",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Customer",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

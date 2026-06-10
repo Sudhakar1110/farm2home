@@ -1,0 +1,222 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:PAY-{customer}-{####}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "payment_details",
+        "customer",
+        "customer_name",
+        "order",
+        "subscription",
+        "column_break_1",
+        "status",
+        "payment_date",
+        "payment_mode",
+        "amount_section",
+        "amount",
+        "transaction_fee",
+        "column_break_2",
+        "total_amount",
+        "currency",
+        "reference_section",
+        "transaction_id",
+        "reference_number",
+        "gateway_response",
+        "column_break_3",
+        "upi_id",
+        "qr_code_reference",
+        "refund_section",
+        "is_refunded",
+        "refund_amount",
+        "refund_date",
+        "refund_reason"
+    ],
+    "fields": [
+        {
+            "fieldname": "payment_details",
+            "fieldtype": "Section Break",
+            "label": "Payment Details"
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "Customer Name",
+            "fetch_from": "customer.customer_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "order",
+            "fieldtype": "Link",
+            "label": "Order",
+            "options": "Order"
+        },
+        {
+            "fieldname": "subscription",
+            "fieldtype": "Link",
+            "label": "Subscription",
+            "options": "Subscription"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Pending\nCompleted\nFailed\nRefunded\nCancelled",
+            "default": "Pending"
+        },
+        {
+            "fieldname": "payment_date",
+            "fieldtype": "Datetime",
+            "label": "Payment Date",
+            "default": "Now"
+        },
+        {
+            "fieldname": "payment_mode",
+            "fieldtype": "Select",
+            "label": "Payment Mode",
+            "options": "UPI\nCard\nCash on Delivery\nWallet\nQR Code\nBank Transfer"
+        },
+        {
+            "fieldname": "amount_section",
+            "fieldtype": "Section Break",
+            "label": "Amount"
+        },
+        {
+            "fieldname": "amount",
+            "fieldtype": "Currency",
+            "label": "Amount",
+            "reqd": 1
+        },
+        {
+            "fieldname": "transaction_fee",
+            "fieldtype": "Currency",
+            "label": "Transaction Fee"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "total_amount",
+            "fieldtype": "Currency",
+            "label": "Total Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "currency",
+            "fieldtype": "Link",
+            "label": "Currency",
+            "options": "Currency",
+            "default": "INR"
+        },
+        {
+            "fieldname": "reference_section",
+            "fieldtype": "Section Break",
+            "label": "Reference"
+        },
+        {
+            "fieldname": "transaction_id",
+            "fieldtype": "Data",
+            "label": "Transaction ID"
+        },
+        {
+            "fieldname": "reference_number",
+            "fieldtype": "Data",
+            "label": "Reference Number"
+        },
+        {
+            "fieldname": "gateway_response",
+            "fieldtype": "Code",
+            "label": "Gateway Response"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "upi_id",
+            "fieldtype": "Data",
+            "label": "UPI ID"
+        },
+        {
+            "fieldname": "qr_code_reference",
+            "fieldtype": "Data",
+            "label": "QR Code Reference"
+        },
+        {
+            "fieldname": "refund_section",
+            "fieldtype": "Section Break",
+            "label": "Refund"
+        },
+        {
+            "fieldname": "is_refunded",
+            "fieldtype": "Check",
+            "label": "Is Refunded"
+        },
+        {
+            "fieldname": "refund_amount",
+            "fieldtype": "Currency",
+            "label": "Refund Amount"
+        },
+        {
+            "fieldname": "refund_date",
+            "fieldtype": "Date",
+            "label": "Refund Date"
+        },
+        {
+            "fieldname": "refund_reason",
+            "fieldtype": "Small Text",
+            "label": "Refund Reason"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_submittable": 1,
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Payment Transaction",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Farm Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

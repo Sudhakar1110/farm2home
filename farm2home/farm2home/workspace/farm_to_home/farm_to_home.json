@@ -1,0 +1,299 @@
+{
+    "charts": [
+        {
+            "chart_name": "Farm2Home Monthly Sales",
+            "label": "Monthly Sales"
+        },
+        {
+            "chart_name": "Farm2Home Subscription Growth",
+            "label": "Subscription Growth"
+        },
+        {
+            "chart_name": "Farm2Home Top Products",
+            "label": "Top Products"
+        }
+    ],
+    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Farm to Home Subscription Platform</span>\",\"level\":4}},{\"type\":\"paragraph\",\"data\":{\"text\":\"Manage farms, products, subscriptions, orders, deliveries, and payments.\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Farm\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Subscription\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Order\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Schedule\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Transaction\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quality Inspection\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"spacer\":1}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Farm2Home Total Orders\"}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Farm2Home Active Subscriptions\"}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Farm2Home Total Revenue\"}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Farm2Home Pending Deliveries\"}},{\"type\":\"spacer\",\"data\":{\"spacer\":1}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Farm2Home Monthly Sales\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Farm2Home Subscription Growth\",\"col\":6}}]",
+    "custom_blocks": [],
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "for_user": "",
+    "hide_custom": 0,
+    "icon": "leaf",
+    "is_hidden": 0,
+    "label": "Farm to Home",
+    "links": [
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Farm Management",
+            "link_count": 0,
+            "link_to": "Farm",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Farmers",
+            "link_count": 0,
+            "link_to": "Farmer",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Products",
+            "link_count": 0,
+            "link_to": "Product",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Farm Products",
+            "link_count": 0,
+            "link_to": "Farm Product",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Subscriptions",
+            "link_count": 0,
+            "link_to": "Subscription",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Subscription Plans",
+            "link_count": 0,
+            "link_to": "Subscription Plan",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Orders",
+            "link_count": 0,
+            "link_to": "Order",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Delivery Schedules",
+            "link_count": 0,
+            "link_to": "Delivery Schedule",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Delivery Agents",
+            "link_count": 0,
+            "link_to": "Delivery Agent",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Payment Transactions",
+            "link_count": 0,
+            "link_to": "Payment Transaction",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Quality Inspections",
+            "link_count": 0,
+            "link_to": "Quality Inspection",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 1,
+            "label": "Sales Analysis Report",
+            "link_count": 0,
+            "link_to": "Sales Analysis Report",
+            "link_type": "Report",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 1,
+            "label": "Subscription Revenue Report",
+            "link_count": 0,
+            "link_to": "Subscription Revenue Report",
+            "link_type": "Report",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 1,
+            "label": "Farm Performance Report",
+            "link_count": 0,
+            "link_to": "Farm Performance Report",
+            "link_type": "Report",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 1,
+            "label": "Delivery Performance Report",
+            "link_count": 0,
+            "link_to": "Delivery Performance Report",
+            "link_type": "Report",
+            "onboard": 0,
+            "type": "Link"
+        }
+    ],
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Farm to Home",
+    "number_cards": [
+        {
+            "label": "Total Orders",
+            "number_card_name": "Farm2Home Total Orders"
+        },
+        {
+            "label": "Active Subscriptions",
+            "number_card_name": "Farm2Home Active Subscriptions"
+        },
+        {
+            "label": "Total Revenue",
+            "number_card_name": "Farm2Home Total Revenue"
+        },
+        {
+            "label": "Pending Deliveries",
+            "number_card_name": "Farm2Home Pending Deliveries"
+        }
+    ],
+    "parent_page": "",
+    "public": 1,
+    "quick_lists": [],
+    "roles": [
+        {
+            "role": "System Manager"
+        },
+        {
+            "role": "Farm Manager"
+        },
+        {
+            "role": "Subscription Manager"
+        },
+        {
+            "role": "Farm Admin"
+        }
+    ],
+    "sequence_id": 1.0,
+    "shortcuts": [
+        {
+            "color": "Green",
+            "doc_view": "List",
+            "format": null,
+            "icon": null,
+            "label": "Farm",
+            "link_to": "Farm",
+            "stats_filter": "{\"status\":\"Active\"}",
+            "type": "DocType"
+        },
+        {
+            "color": "Blue",
+            "doc_view": "List",
+            "format": null,
+            "icon": null,
+            "label": "Product",
+            "link_to": "Product",
+            "stats_filter": "{\"status\":\"Active\"}",
+            "type": "DocType"
+        },
+        {
+            "color": "Orange",
+            "doc_view": "List",
+            "format": null,
+            "icon": null,
+            "label": "Subscription",
+            "link_to": "Subscription",
+            "stats_filter": "{\"status\":\"Active\"}",
+            "type": "DocType"
+        },
+        {
+            "color": "Purple",
+            "doc_view": "List",
+            "format": null,
+            "icon": null,
+            "label": "Order",
+            "link_to": "Order",
+            "stats_filter": "{\"status\":\"Confirmed\"}",
+            "type": "DocType"
+        },
+        {
+            "color": "Red",
+            "doc_view": "List",
+            "format": null,
+            "icon": null,
+            "label": "Delivery Schedule",
+            "link_to": "Delivery Schedule",
+            "stats_filter": "{\"status\":\"Scheduled\"}",
+            "type": "DocType"
+        },
+        {
+            "color": "Yellow",
+            "doc_view": "List",
+            "format": null,
+            "icon": null,
+            "label": "Payment Transaction",
+            "link_to": "Payment Transaction",
+            "stats_filter": "{\"status\":\"Completed\"}",
+            "type": "DocType"
+        },
+        {
+            "color": "Cyan",
+            "doc_view": "List",
+            "format": null,
+            "icon": null,
+            "label": "Customer",
+            "link_to": "Customer",
+            "stats_filter": null,
+            "type": "DocType"
+        },
+        {
+            "color": "Pink",
+            "doc_view": "List",
+            "format": null,
+            "icon": null,
+            "label": "Quality Inspection",
+            "link_to": "Quality Inspection",
+            "stats_filter": "{\"status\":\"Draft\"}",
+            "type": "DocType"
+        }
+    ],
+    "title": "Farm to Home"
+}

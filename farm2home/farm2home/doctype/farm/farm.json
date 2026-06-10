@@ -1,0 +1,342 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:FARM-{farm_code}-{###}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "default_view": "List",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "farm_details",
+        "farm_name",
+        "farm_code",
+        "farm_category",
+        "column_break_1",
+        "status",
+        "farm_rating",
+        "is_organic",
+        "location_section",
+        "address",
+        "city",
+        "state",
+        "column_break_2",
+        "pincode",
+        "country",
+        "gps_coordinates",
+        "contact_section",
+        "contact_person",
+        "phone",
+        "email",
+        "column_break_3",
+        "website",
+        "social_media",
+        "farmer_information",
+        "farmers",
+        "certifications_section",
+        "organic_certifications",
+        "farm_description",
+        "description",
+        "farm_images",
+        "images",
+        "performance_metrics",
+        "total_products",
+        "total_orders",
+        "total_revenue",
+        "column_break_4",
+        "customer_rating",
+        "joined_date",
+        "last_updated"
+    ],
+    "fields": [
+        {
+            "fieldname": "farm_details",
+            "fieldtype": "Section Break",
+            "label": "Farm Details"
+        },
+        {
+            "fieldname": "farm_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Farm Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "farm_code",
+            "fieldtype": "Data",
+            "label": "Farm Code",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "farm_category",
+            "fieldtype": "Link",
+            "label": "Farm Category",
+            "options": "Farm Category"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Active\nInactive\nSuspended",
+            "default": "Active"
+        },
+        {
+            "fieldname": "farm_rating",
+            "fieldtype": "Rating",
+            "label": "Farm Rating"
+        },
+        {
+            "fieldname": "is_organic",
+            "fieldtype": "Check",
+            "label": "Is Organic Certified"
+        },
+        {
+            "fieldname": "location_section",
+            "fieldtype": "Section Break",
+            "label": "Location"
+        },
+        {
+            "fieldname": "address",
+            "fieldtype": "Small Text",
+            "label": "Address"
+        },
+        {
+            "fieldname": "city",
+            "fieldtype": "Data",
+            "label": "City"
+        },
+        {
+            "fieldname": "state",
+            "fieldtype": "Data",
+            "label": "State"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "pincode",
+            "fieldtype": "Data",
+            "label": "Pincode"
+        },
+        {
+            "fieldname": "country",
+            "fieldtype": "Data",
+            "label": "Country",
+            "default": "India"
+        },
+        {
+            "fieldname": "gps_coordinates",
+            "fieldtype": "Data",
+            "label": "GPS Coordinates"
+        },
+        {
+            "fieldname": "contact_section",
+            "fieldtype": "Section Break",
+            "label": "Contact Information"
+        },
+        {
+            "fieldname": "contact_person",
+            "fieldtype": "Data",
+            "label": "Contact Person"
+        },
+        {
+            "fieldname": "phone",
+            "fieldtype": "Data",
+            "label": "Phone",
+            "options": "Phone"
+        },
+        {
+            "fieldname": "email",
+            "fieldtype": "Data",
+            "label": "Email",
+            "options": "Email"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "website",
+            "fieldtype": "Data",
+            "label": "Website",
+            "options": "URL"
+        },
+        {
+            "fieldname": "social_media",
+            "fieldtype": "Data",
+            "label": "Social Media"
+        },
+        {
+            "fieldname": "farmer_information",
+            "fieldtype": "Section Break",
+            "label": "Farmer Information"
+        },
+        {
+            "fieldname": "farmers",
+            "fieldtype": "Table",
+            "label": "Farmers",
+            "options": "Farm Farmer"
+        },
+        {
+            "fieldname": "certifications_section",
+            "fieldtype": "Section Break",
+            "label": "Certifications"
+        },
+        {
+            "fieldname": "organic_certifications",
+            "fieldtype": "Table",
+            "label": "Organic Certifications",
+            "options": "Farm Certification"
+        },
+        {
+            "fieldname": "farm_description",
+            "fieldtype": "Section Break",
+            "label": "Description"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text Editor",
+            "label": "Description"
+        },
+        {
+            "fieldname": "farm_images",
+            "fieldtype": "Section Break",
+            "label": "Images"
+        },
+        {
+            "fieldname": "images",
+            "fieldtype": "Attach Image",
+            "label": "Farm Images"
+        },
+        {
+            "fieldname": "performance_metrics",
+            "fieldtype": "Section Break",
+            "label": "Performance Metrics",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_products",
+            "fieldtype": "Int",
+            "label": "Total Products",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_orders",
+            "fieldtype": "Int",
+            "label": "Total Orders",
+            "read_only": 1
+        },
+        {
+            "fieldname": "total_revenue",
+            "fieldtype": "Currency",
+            "label": "Total Revenue",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_4",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "customer_rating",
+            "fieldtype": "Rating",
+            "label": "Customer Rating",
+            "read_only": 1
+        },
+        {
+            "fieldname": "joined_date",
+            "fieldtype": "Date",
+            "label": "Joined Date",
+            "default": "Today"
+        },
+        {
+            "fieldname": "last_updated",
+            "fieldtype": "Datetime",
+            "label": "Last Updated",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [
+        {
+            "group": "Products",
+            "link_doctype": "Farm Product",
+            "link_fieldname": "farm"
+        },
+        {
+            "group": "Orders",
+            "link_doctype": "Order",
+            "link_fieldname": "farm"
+        },
+        {
+            "group": "Subscriptions",
+            "link_doctype": "Subscription",
+            "link_fieldname": "farm"
+        }
+    ],
+    "modified": "2024-01-01 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Farm to Home",
+    "name": "Farm",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Farm Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Farm Admin",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Customer",
+            "share": 0,
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
+}

@@ -1,0 +1,22 @@
+{
+    "aggregate_function_based_on": "",
+    "color": "#f44336",
+    "creation": "2024-01-01 00:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Number Card",
+    "document_type": "Delivery Schedule",
+    "dynamic_filters_json": "[]",
+    "filters_json": "[[\"Delivery Schedule\",\"status\",\"in\",[\"Scheduled\",\"Confirmed\",\"Out for Delivery\"],false]]",
+    "function": "Count",
+    "idx": 0,
+    "is_public": 1,
+    "is_standard": 1,
+    "label": "Pending Deliveries",
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Farm2Home Pending Deliveries",
+    "report_function": "Sum",
+    "show_percentage_stats": 1,
+    "stats_time_interval": "Daily",
+    "type": "Document Type"
+}

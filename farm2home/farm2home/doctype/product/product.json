@@ -1,0 +1,277 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:PROD-{product_code}-{###}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "product_details",
+        "product_name",
+        "product_code",
+        "category",
+        "column_break_1",
+        "status",
+        "product_type",
+        "is_organic",
+        "pricing_section",
+        "base_price",
+        "selling_price",
+        "discount_percentage",
+        "column_break_2",
+        "unit",
+        "tax_rate",
+        "mrp",
+        "inventory_section",
+        "stock_quantity",
+        "reorder_level",
+        "warehouse",
+        "column_break_3",
+        "available_for_subscription",
+        "available_for_one_time",
+        "description_section",
+        "short_description",
+        "full_description",
+        "images_section",
+        "product_image",
+        "quality_section",
+        "quality_grade",
+        "shelf_life_days",
+        "storage_instructions"
+    ],
+    "fields": [
+        {
+            "fieldname": "product_details",
+            "fieldtype": "Section Break",
+            "label": "Product Details"
+        },
+        {
+            "fieldname": "product_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Product Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "product_code",
+            "fieldtype": "Data",
+            "label": "Product Code",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "category",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Category",
+            "options": "Product Category",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Active\nInactive\nOut of Stock\nDiscontinued",
+            "default": "Active"
+        },
+        {
+            "fieldname": "product_type",
+            "fieldtype": "Select",
+            "label": "Product Type",
+            "options": "Vegetable\nFruit\nDairy\nGrain\nPulse\nSpice\nHerb\nOther"
+        },
+        {
+            "fieldname": "is_organic",
+            "fieldtype": "Check",
+            "label": "Is Organic"
+        },
+        {
+            "fieldname": "pricing_section",
+            "fieldtype": "Section Break",
+            "label": "Pricing"
+        },
+        {
+            "fieldname": "base_price",
+            "fieldtype": "Currency",
+            "label": "Base Price",
+            "reqd": 1
+        },
+        {
+            "fieldname": "selling_price",
+            "fieldtype": "Currency",
+            "label": "Selling Price",
+            "reqd": 1
+        },
+        {
+            "fieldname": "discount_percentage",
+            "fieldtype": "Percent",
+            "label": "Discount %"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "unit",
+            "fieldtype": "Select",
+            "label": "Unit",
+            "options": "Kg\nGram\nLitre\nMl\nPiece\nDozen\nBunch\nBox\nPacket"
+        },
+        {
+            "fieldname": "tax_rate",
+            "fieldtype": "Percent",
+            "label": "Tax Rate"
+        },
+        {
+            "fieldname": "mrp",
+            "fieldtype": "Currency",
+            "label": "MRP"
+        },
+        {
+            "fieldname": "inventory_section",
+            "fieldtype": "Section Break",
+            "label": "Inventory"
+        },
+        {
+            "fieldname": "stock_quantity",
+            "fieldtype": "Float",
+            "label": "Stock Quantity"
+        },
+        {
+            "fieldname": "reorder_level",
+            "fieldtype": "Float",
+            "label": "Reorder Level"
+        },
+        {
+            "fieldname": "warehouse",
+            "fieldtype": "Link",
+            "label": "Warehouse",
+            "options": "Warehouse"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "available_for_subscription",
+            "fieldtype": "Check",
+            "label": "Available for Subscription",
+            "default": 1
+        },
+        {
+            "fieldname": "available_for_one_time",
+            "fieldtype": "Check",
+            "label": "Available for One-time Purchase",
+            "default": 1
+        },
+        {
+            "fieldname": "description_section",
+            "fieldtype": "Section Break",
+            "label": "Description"
+        },
+        {
+            "fieldname": "short_description",
+            "fieldtype": "Data",
+            "label": "Short Description"
+        },
+        {
+            "fieldname": "full_description",
+            "fieldtype": "Text Editor",
+            "label": "Full Description"
+        },
+        {
+            "fieldname": "images_section",
+            "fieldtype": "Section Break",
+            "label": "Images"
+        },
+        {
+            "fieldname": "product_image",
+            "fieldtype": "Attach Image",
+            "label": "Product Image"
+        },
+        {
+            "fieldname": "quality_section",
+            "fieldtype": "Section Break",
+            "label": "Quality"
+        },
+        {
+            "fieldname": "quality_grade",
+            "fieldtype": "Select",
+            "label": "Quality Grade",
+            "options": "Grade A\nGrade B\nGrade C\nPremium\nStandard"
+        },
+        {
+            "fieldname": "shelf_life_days",
+            "fieldtype": "Int",
+            "label": "Shelf Life (Days)"
+        },
+        {
+            "fieldname": "storage_instructions",
+            "fieldtype": "Small Text",
+            "label": "Storage Instructions"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [
+        {
+            "group": "Inventory",
+            "link_doctype": "Product Inventory",
+            "link_fieldname": "product"
+        },
+        {
+            "group": "Orders",
+            "link_doctype": "Order Item",
+            "link_fieldname": "product"
+        }
+    ],
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Product",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Farm Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Customer",
+            "share": 0,
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

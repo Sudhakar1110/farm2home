@@ -1,0 +1,304 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "format:ORD-{customer}-{####}",
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "order_details",
+        "customer",
+        "customer_name",
+        "order_type",
+        "column_break_1",
+        "status",
+        "order_date",
+        "delivery_date",
+        "farm_section",
+        "farm",
+        "farm_name",
+        "items_section",
+        "order_items",
+        "totals_section",
+        "subtotal",
+        "tax_amount",
+        "delivery_charge",
+        "column_break_2",
+        "discount_amount",
+        "grand_total",
+        "paid_amount",
+        "balance_amount",
+        "delivery_section",
+        "delivery_address",
+        "delivery_zone",
+        "delivery_time_slot",
+        "column_break_3",
+        "delivery_agent",
+        "tracking_number",
+        "payment_section",
+        "payment_mode",
+        "payment_status",
+        "notes_section",
+        "customer_notes",
+        "internal_notes"
+    ],
+    "fields": [
+        {
+            "fieldname": "order_details",
+            "fieldtype": "Section Break",
+            "label": "Order Details"
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer_name",
+            "fieldtype": "Data",
+            "label": "Customer Name",
+            "fetch_from": "customer.customer_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "order_type",
+            "fieldtype": "Select",
+            "label": "Order Type",
+            "options": "One-time\nSubscription",
+            "default": "One-time"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Draft\nConfirmed\nProcessing\nOut for Delivery\nDelivered\nCancelled\nReturned",
+            "default": "Draft"
+        },
+        {
+            "fieldname": "order_date",
+            "fieldtype": "Date",
+            "label": "Order Date",
+            "default": "Today"
+        },
+        {
+            "fieldname": "delivery_date",
+            "fieldtype": "Date",
+            "label": "Delivery Date"
+        },
+        {
+            "fieldname": "farm_section",
+            "fieldtype": "Section Break",
+            "label": "Farm"
+        },
+        {
+            "fieldname": "farm",
+            "fieldtype": "Link",
+            "label": "Farm",
+            "options": "Farm"
+        },
+        {
+            "fieldname": "farm_name",
+            "fieldtype": "Data",
+            "label": "Farm Name",
+            "fetch_from": "farm.farm_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "items_section",
+            "fieldtype": "Section Break",
+            "label": "Items"
+        },
+        {
+            "fieldname": "order_items",
+            "fieldtype": "Table",
+            "label": "Order Items",
+            "options": "Order Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "totals_section",
+            "fieldtype": "Section Break",
+            "label": "Totals"
+        },
+        {
+            "fieldname": "subtotal",
+            "fieldtype": "Currency",
+            "label": "Subtotal",
+            "read_only": 1
+        },
+        {
+            "fieldname": "tax_amount",
+            "fieldtype": "Currency",
+            "label": "Tax Amount"
+        },
+        {
+            "fieldname": "delivery_charge",
+            "fieldtype": "Currency",
+            "label": "Delivery Charge"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "discount_amount",
+            "fieldtype": "Currency",
+            "label": "Discount Amount"
+        },
+        {
+            "fieldname": "grand_total",
+            "fieldtype": "Currency",
+            "label": "Grand Total",
+            "read_only": 1
+        },
+        {
+            "fieldname": "paid_amount",
+            "fieldtype": "Currency",
+            "label": "Paid Amount"
+        },
+        {
+            "fieldname": "balance_amount",
+            "fieldtype": "Currency",
+            "label": "Balance Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "delivery_section",
+            "fieldtype": "Section Break",
+            "label": "Delivery"
+        },
+        {
+            "fieldname": "delivery_address",
+            "fieldtype": "Link",
+            "label": "Delivery Address",
+            "options": "Address"
+        },
+        {
+            "fieldname": "delivery_zone",
+            "fieldtype": "Link",
+            "label": "Delivery Zone",
+            "options": "Delivery Zone"
+        },
+        {
+            "fieldname": "delivery_time_slot",
+            "fieldtype": "Select",
+            "label": "Delivery Time Slot",
+            "options": "6 AM - 8 AM\n8 AM - 10 AM\n10 AM - 12 PM\n4 PM - 6 PM\n6 PM - 8 PM"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "delivery_agent",
+            "fieldtype": "Link",
+            "label": "Delivery Agent",
+            "options": "Delivery Agent"
+        },
+        {
+            "fieldname": "tracking_number",
+            "fieldtype": "Data",
+            "label": "Tracking Number"
+        },
+        {
+            "fieldname": "payment_section",
+            "fieldtype": "Section Break",
+            "label": "Payment"
+        },
+        {
+            "fieldname": "payment_mode",
+            "fieldtype": "Select",
+            "label": "Payment Mode",
+            "options": "UPI\nCard\nCash on Delivery\nWallet\nQR Code"
+        },
+        {
+            "fieldname": "payment_status",
+            "fieldtype": "Select",
+            "label": "Payment Status",
+            "options": "Pending\nPartially Paid\nPaid\nRefunded",
+            "default": "Pending"
+        },
+        {
+            "fieldname": "notes_section",
+            "fieldtype": "Section Break",
+            "label": "Notes"
+        },
+        {
+            "fieldname": "customer_notes",
+            "fieldtype": "Small Text",
+            "label": "Customer Notes"
+        },
+        {
+            "fieldname": "internal_notes",
+            "fieldtype": "Small Text",
+            "label": "Internal Notes"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_submittable": 1,
+    "links": [
+        {
+            "group": "Deliveries",
+            "link_doctype": "Delivery Schedule",
+            "link_fieldname": "order"
+        },
+        {
+            "group": "Payments",
+            "link_doctype": "Payment Transaction",
+            "link_fieldname": "order"
+        }
+    ],
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Order",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Farm Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Customer",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

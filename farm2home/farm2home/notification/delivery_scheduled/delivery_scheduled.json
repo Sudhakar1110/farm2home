@@ -1,0 +1,30 @@
+{
+    "attach_print": 0,
+    "channel": "Email",
+    "creation": "2024-01-01 00:00:00.000000",
+    "days_in_advance": 0,
+    "docstatus": 0,
+    "doctype": "Notification",
+    "document_type": "Delivery Schedule",
+    "enabled": 1,
+    "event": "New",
+    "idx": 0,
+    "is_standard": 1,
+    "message": "<p>Dear {{ doc.customer_name }},</p>\n\n<p>Your delivery has been scheduled for <strong>{{ doc.delivery_date }}</strong> between {{ doc.delivery_time_slot }}.</p>\n\n<p>Tracking Number: {{ doc.tracking_number or 'N/A' }}</p>\n\n<p>Thank you for choosing Farm2Home!</p>",
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Delivery Scheduled",
+    "print_format": "",
+    "property_value": "",
+    "recipients": [
+        {
+            "receiver_by_document_field": "customer",
+            "receiver_by_role": ""
+        }
+    ],
+    "send_system_notification": 1,
+    "send_to_all_assignees": 0,
+    "sender": "",
+    "sender_email": "",
+    "subject": "Delivery Scheduled - {{ doc.name }}"
+}

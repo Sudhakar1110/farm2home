@@ -1,0 +1,30 @@
+{
+    "attach_print": 1,
+    "channel": "Email",
+    "creation": "2024-01-01 00:00:00.000000",
+    "days_in_advance": 0,
+    "docstatus": 0,
+    "doctype": "Notification",
+    "document_type": "Order",
+    "enabled": 1,
+    "event": "Submit",
+    "idx": 0,
+    "is_standard": 1,
+    "message": "<p>Dear {{ doc.customer_name }},</p>\n\n<p>Your order <strong>{{ doc.name }}</strong> has been confirmed.</p>\n\n<p><strong>Order Details:</strong></p>\n<ul>\n<li>Order Date: {{ doc.order_date }}</li>\n<li>Delivery Date: {{ doc.delivery_date }}</li>\n<li>Grand Total: {{ doc.grand_total }}</li>\n</ul>\n\n<p>Thank you for choosing Farm2Home!</p>",
+    "modified": "2024-01-01 00:00:00.000000",
+    "module": "Farm to Home",
+    "name": "Order Confirmation",
+    "print_format": "Farm2Home Order",
+    "property_value": "",
+    "recipients": [
+        {
+            "receiver_by_document_field": "customer",
+            "receiver_by_role": ""
+        }
+    ],
+    "send_system_notification": 1,
+    "send_to_all_assignees": 0,
+    "sender": "",
+    "sender_email": "",
+    "subject": "Order Confirmed - {{ doc.name }}"
+}

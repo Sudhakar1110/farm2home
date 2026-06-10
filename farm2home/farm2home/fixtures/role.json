@@ -1,0 +1,32 @@
+[
+    {
+        "doctype": "Role",
+        "name": "Farm Manager",
+        "desk_access": 1,
+        "two_factor_auth": 0
+    },
+    {
+        "doctype": "Role",
+        "name": "Delivery Agent",
+        "desk_access": 1,
+        "two_factor_auth": 0
+    },
+    {
+        "doctype": "Role",
+        "name": "Subscription Manager",
+        "desk_access": 1,
+        "two_factor_auth": 0
+    },
+    {
+        "doctype": "Role",
+        "name": "Quality Inspector",
+        "desk_access": 1,
+        "two_factor_auth": 0
+    },
+    {
+        "doctype": "Role",
+        "name": "Farm Admin",
+        "desk_access": 1,
+        "two_factor_auth": 0
+    }
+]

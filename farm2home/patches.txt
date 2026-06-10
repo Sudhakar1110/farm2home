@@ -1,0 +1,5 @@
+farm2home.patches.v1_0_0.create_default_farm_categories
+farm2home.patches.v1_0_0.create_default_product_categories
+farm2home.patches.v1_0_0.create_default_subscription_plans
+farm2home.patches.v1_0_0.create_default_delivery_zones
+farm2home.patches.v1_0_0.create_default_roles_and_permissions
