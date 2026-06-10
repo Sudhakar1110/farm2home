@@ -61,5 +61,12 @@
     "module_name": "Configuration",
     "app_name": "farm2home",
     "custom": 1
+  },
+  {
+    "doctype": "Module Def",
+    "name": "Farm to Home",
+    "module_name": "Farm to Home",
+    "app_name": "farm2home",
+    "custom": 1
   }
 ]
